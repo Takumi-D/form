@@ -34,8 +34,8 @@ router.post("/form", async (req, res) => {
 
         res.json({success: true});
     } catch (error){
-        console.error(error);
-        res.status(500).json({ error: error });
+        console.error("SMTP ERROR:", error);
+        res.status(500).json({ error: error.message, full: error });
     }
 })
 

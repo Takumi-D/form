@@ -1,19 +1,10 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+const { Resend } = require('resend');
 
-const transporter = nodemailer.createTransport({
-    host: 'mail.hosting.reg.ru',
-    port: 587,
-    secure: true,
-    auth: {
-        user: 'admin@form-send.ru',
-        pass: process.env.EMAIL_PASS
-    }
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendMail(to, subject, html) {
-    return await transporter.sendMail({
-        from: '"Форма связи" <admin@form-send.ru>',
+    return await resend.emails.send({
+        from: 'onboarding@resend.dev',
         to: to,
         subject: subject,
         html: html
