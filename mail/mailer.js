@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendMail(to, subject, html) {
     return await resend.emails.send({
-        from: 'onboarding@resend.dev',
+        from: 'admin@form-send.ru',
         to: to,
         subject: subject,
         html: html
