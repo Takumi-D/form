@@ -1,4 +1,5 @@
 const formEl = document.getElementById("form");
+const button = formEl.querySelector("button");
 
 function validateName(name) {
     const regex = /^[А-Яа-яA-Za-z\- ]{2,30}$/;
@@ -51,6 +52,9 @@ formEl.addEventListener("submit", async (event) => {
     }
 
     try {
+        button.disabled = true;
+        button.innerText = "Отправка...";
+
         const response = await fetch("/form", {
             method: "POST",
             body: JSON.stringify(formData),
@@ -67,9 +71,14 @@ formEl.addEventListener("submit", async (event) => {
 
         formEl.reset();
 
+        alert("Сообщение успешно отправлено!");
+
         console.log("response", data);
 
     } catch (e){
         console.error("Ошибка:", e);
+    } finally {
+        button.disabled = false;
+        button.innerText = "Отправить";
     }
 });
