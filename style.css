@@ -1,0 +1,130 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.feedback-form {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 32px;
+    padding: 40px 32px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.feedback-form__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e1e2f;
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.feedback-form__label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.feedback-form__label-text {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.feedback-form__input,
+.feedback-form__textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 0.2s ease;
+    outline: none;
+    color: #1a202c;
+}
+
+.feedback-form__input:focus,
+.feedback-form__textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.feedback-form__input:hover,
+.feedback-form__textarea:hover {
+    border-color: #cbd5e1;
+}
+
+.feedback-form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.feedback-form__button {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+}
+
+.feedback-form__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(102, 126, 234, 0.4);
+}
+
+.feedback-form__button:active {
+    transform: translateY(0);
+}
+
+.feedback-form__button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Адаптивность */
+@media (max-width: 560px) {
+    .feedback-form {
+        padding: 28px 20px;
+    }
+
+    .feedback-form__title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .feedback-form__input,
+    .feedback-form__textarea {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .feedback-form__button {
+        padding: 14px;
+    }
+}

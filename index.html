@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+<body>
+<form id="form" class="feedback-form" method="POST">
+    <h1 class="feedback-form__title">Обратная связь</h1>
+
+    <label class="feedback-form__label">
+        <span class="feedback-form__label-text">Ваше имя</span>
+        <input type="text" name="name" class="feedback-form__input" required>
+    </label>
+
+    <label class="feedback-form__label">
+        <span class="feedback-form__label-text">Ваш телефон</span>
+        <input type="tel" name="phone" class="feedback-form__input" required>
+    </label>
+
+    <label class="feedback-form__label">
+        <span class="feedback-form__label-text">Ваша почта</span>
+        <input type="email" name="email" class="feedback-form__input" required>
+    </label>
+
+    <label class="feedback-form__label">
+        <span class="feedback-form__label-text">Комментарий</span>
+        <textarea name="comment" class="feedback-form__textarea" rows="4"></textarea>
+    </label>
+
+    <button type="submit" class="feedback-form__button">Отправить</button>
+</form>
+
+<script src="./script.js"></script>
+</body>
+</html>
