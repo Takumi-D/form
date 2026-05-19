@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
     host: 'mail.hosting.reg.ru',
-    port: 465,
+    port: 587,
     secure: true,
     auth: {
         user: 'admin@form-send.ru',
